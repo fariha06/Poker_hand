@@ -1,3 +1,5 @@
+import sys
+
 def rank_hands(hand1, hand2):
     values = {'2': 2, '3': 3, '4': 4, '5': 5, '6': 6, '7': 7, '8': 8, '9': 9, 'T': 10, 'J': 11, 'Q': 12, 'K': 13, 'A': 14}
 
@@ -38,11 +40,13 @@ def rank_hands(hand1, hand2):
     return compare_hands(hand1_values, hand2_values)
 
 
-# Test cases
-print(rank_hands("KQ23Q", "TA3J7"))  # First hand wins!
-print(rank_hands("KTQTT", "AAQQT"))  # First hand wins!
-print(rank_hands("AKKAA", "222T2"))  # Second hand wins!
-print(rank_hands("A3A46", "K32KT"))  # First hand wins!
-print(rank_hands("A3A46", "258AA"))  # Second hand wins!
-print(rank_hands("TA982", "98TA2"))  # It's a tie!
-print(rank_hands("32233", "A4A5A"))  # First hand wins!
+if __name__ == "__main__":
+    if len(sys.argv) == 3:
+        hand1 = sys.argv[1]
+        hand2 = sys.argv[2]
+    else:
+        hand1 = input("Enter the first hand: ")
+        hand2 = input("Enter the second hand: ")
+        
+    result = rank_hands(hand1, hand2)
+    print(result)
