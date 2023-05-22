@@ -1,32 +1,25 @@
 # Poker_hand
-This Python program implements an algorithm to rank two poker hands and determine the winner.
 
 ## Description
-The program takes two poker hands as input and ranks them based on the following hand types, from best to worst:
+This is a Python program that ranks two poker hands and determines which hand wins based on the standard poker hand rankings. The program implements the ranking algorithm according to the specified rules, considering different hand types such as Four of a kind, Full House, Triples, Two pairs, Pair, and Highest card.
 
-- Four of a Kind
-- Full House
-- Triples
-- Two Pairs
-- Pair
-- Highest Card
+## How to Use
 
-If two hands have the same hand type, the program compares the highest card value to determine the winner. If the highest card values are also the same, it's a tie.
-The program is implemented in Python and can be run from the command line.
+1. Clone the repository to your local machine or download the source code files.
+2. Make sure you have Python installed on your system.
+3. Open a terminal or command prompt and navigate to the project directory.
+4. Run the program using the following command:
 
-## Usage
-To use the program, below steps are followed:
+    ```
+    python poker.py [hand1] [hand2]
+    ```
 
-1. Ensure to have Python installed on your machine.
+    Replace `[hand1]` and `[hand2]` with the poker hands you want to compare, using the following format:
 
-2. Clone this repository or download the `poker.py` file.
+    - Use uppercase letters for cards: A (Ace), K (King), Q (Queen), J (Jack), T (Ten), and numbers 2-9.
+    - Each hand should consist of exactly 5 cards, separated by no spaces.
 
-3. Open a terminal or command prompt and navigate to the directory containing the `poker.py` file.
-
-4. Run the program by executing the following command:
-Replace `[hand1]` and `[hand2]` with the poker hands you want to compare, represented as strings. Each card in the hand should be represented by its rank and suit. For example, "A" for Ace, "K" for King, "Q" for Queen, "J" for Jack, "T" for Ten, and "2" to "9" for the corresponding numbered cards. The cards should be provided in the order they were dealt.
-
-5. The program will output the result indicating which hand wins or if it's a tie.
+5. The program will display the result, indicating which hand wins or if it's a tie.
 
 ## Examples
 Here are some example poker hands and their outcomes:
